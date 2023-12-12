@@ -4,30 +4,35 @@
 ***
 ### Latar Belakang
 
-Dalam ruang lingkup penjualan, setiap barang keluar dan masuk harus bisa terdokumentasi. Pendokumentasian atau pendataan barang keluar dan masuk harus dilakukan agar pihak penjual dapat melakukan analisis dari hasil penjualan yang telah dilakukan.Pendataan juga dapat membantu dalam merencanakan stok, promosi, dan pengembangan produk lebih lanjut. Dengan informasi ini, dapat dilakukan alokasi sumber daya secara lebih baik lagi. Dengan bantuan teknologi, lebih khususnya penggunaan Machine Learning, penarikan informasi dari sebuah data menjadi lebih efektif dan efisien. Pada penelitian ini ditujukan membandingkan kemampuan metode machine learning dalam memetakan penjualan global (Global Sales) dari data penjualan Video Game. Selanjutnya, metode terbaik dari penelitian ini dapat digunakan untuk melakukan pemodelan terhadap data penjualan video game yang lain.
+Dalam ruang lingkup penjualan, setiap barang keluar dan masuk harus bisa terdokumentasi. Pendokumentasian atau pendataan barang keluar dan masuk harus dilakukan agar pihak penjual dapat melakukan analisis dari hasil penjualan yang telah dilakukan. Pendataan juga dapat membantu dalam merencanakan stok, promosi, dan pengembangan produk lebih lanjut. Dengan informasi ini, dapat dilakukan alokasi sumber daya secara lebih baik lagi. Dengan bantuan teknologi, lebih khususnya penggunaan *Machine Learning*, penarikan informasi dari sebuah data menjadi lebih efektif dan efisien. Pada penelitian ini ditujukan membandingkan kemampuan metode *machine learning* dalam memetakan penjualan global (*Global Sales*) dari data *Video Game Sales*. Selanjutnya, metode terbaik dari penelitian ini dapat digunakan untuk melakukan pemodelan terhadap data penjualan *video game* yang lain.
 
-Dataset merupakan koleksi data yang berfokus kepada prediksi customer churn. Dataset berisi berbagai fitur yang menggambarkan setiap customer, seperti  'Rank', 'Name', 'Platform', 'Year', 'Genre', 'Publisher', 'NA_Sales', 'EU_Sales', 'JP_Sales', 'Other_Sales', 'Global_Sales'. Tujuannya adalah untuk melakukan analisis prediksi Global Sales terhadap data penjualan video game.
+Referensi latar belakang dan metode 
+- [*Data Visualization on video games global sales analysis & Predictive analysis on Real Estate pricing in Boston*](https://d1wqtxts1xzle7.cloudfront.net/67039858/IJCST_V9I3P1-libre.pdf?1620438431=&response-content-disposition=inline%3B+filename%3DIJCST_V9I3P1_Tabdil_Sai_Akhil_Navjot_Ka.pdf&Expires=1702380322&Signature=QXJSB4pLToYzKVu1P4wI8rdhjiqaOtz8dCnZf5vBH6YhvfRsPDhKXW5TRnaXqMlk1tG42usnqk06yi0D33kdvyv0327AYE9slzFtkMbzqaaZQbp6~CI5zyBMZXmtefxE51FpDkAXfXnRzhWpsyxgPg9NEe6A5M5rIsfyc4f4Wjd5yBSHvDMvwDYXGWox0fz6IjaTn0RIZk1WaPmNuGKNss8Wa07Dt4YYFG-AgRVKLSczBBtLmSUP1kJGget0yvdR1g62KmeKL5e~n8LlkJrFj7ujywQ6zdPBBLWR2QGp7PGKJjShDKj4MDBZ6MWZT2JRuJxaQ7cL16~S6B3NEnSIcw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA)
+- [*SALES PREDICTION USING MACHINE LEARNING ALGORITHMS*](https://d1wqtxts1xzle7.cloudfront.net/64640730/IRJET-V7I6676-libre.pdf?1602308039=&response-content-disposition=inline%3B+filename%3DIRJET_SALES_PREDICTION_USING_MACHINE_LEA.pdf&Expires=1702380581&Signature=YCOtLO9pLcMEE6gU1010keqPEL-X1I0F8xZ22xQ7YmHEp-LFPCoz4RlRbXp8mqrkfCr5h3qV4XpHX~Zcovnjn4tWirvcuFTTlSe~-HjFiy8E72LLMGH6f0FRZBj9NaRcsCuumforqm8-xroUhq1JXCqbzSWs1-p4bN6AKF6kdhVWWAO-FJJiIz8ezIYh9IJTJEbpWalbDwpFVBCgcu0s2Jta46rWil6NvTeEJLMMVNmxxBE3KKDlp83ExNSVNEx1TceGodjt72MDFf5ruAxdTR47Fm50kpSpO2Ld8X~I6eV2WHxqaXXiON3Lb70Sc3qh4jxMclC0HTpbXuGTYKMJwQ__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA)
 
 ## Business Understanding
 
 ### Problem Statements
 
-Menjelaskan pernyataan masalah latar belakang:
-- Bagaimana langkah dalam mempersiapkan data untuk dilakukan pelatihan model machine learning?
-- Bagaimana konfigurasi metode machine learning yang digunakan?
-- Bagaimana kemampuan metode machine learning yang digunakan?
+Berdasarkan latar belakang yang telah diuraikan, terdapat beberapa *problem statements* yang akan dibahas sebagai berikut: 
+- Bagaimana langkah dalam mempersiapkan data *Video Game Sales* untuk dilakukan pelatihan model *machine learning*?
+- Bagaimana konfigurasi metode *machine learning* yang digunakan?
+- Bagaimana kemampuan metode *machine learning* yang digunakan?
 
 ### Goals
 
-Menjelaskan tujuan dari pernyataan masalah:
-- Mengetahui langkah dalam mempersiapkan data untuk dilakukan pelatihan model machine learning?
-- Mengetahui konfigurasi metode machine learning yang digunakan
-- Mengetahui kemampuan metode machine learning yang digunakan
+Berdasarkan *Problem Statements* yang telah diuraikan, terdapat beberapa *Goals* yang akan dicapai sebagai berikut: 
+- Mengetahui langkah dalam mempersiapkan data *Video Game Sales* untuk dilakukan pelatihan model *machine learning*?
+- Mengetahui konfigurasi metode *machine learning* yang digunakan
+- Mengetahui kemampuan metode *machine learning* yang digunakan
 
 ### Solution statements
-- Menggunakan model machine learning K-Nearest Neighbors (KNN), Random Forest, Boosting Algorithm, dan Support Vector Regression 
-- Membuat model machine learning
-- Menggunakan metode evaluasi Mean Squared Error dan R2 Score
+
+Berdasarkan *Goals* yang telah diuraikan, terdapat beberapa rincian *Solution Statements* yang akan dicapai sebagai berikut: 
+- Menggunakan teknik EDA (*Exploratory Data Analysis*) seperti Pendeskripsian Dataset, Penanganan *Missing Value*, *Univariate Analysis* dan *Multivariate Analysis*
+- Menggunakan model machine learning *K-Nearest Neighbors* (KNN), *Random Forest*, *Boosting Algorithm*, dan *Support Vector Regression* untuk dapat dilakukan perbandingan dari setiap metode *machine learning* yang digunakan
+- Membuat model *machine learning*
+- Menggunakan metode evaluasi *Mean Squared Error* dan *R2 / R Squared Score*
 
 ## Data Understanding
 Data yang digunakan bersumber dari [kaggle](https://www.kaggle.com/datasets/gregorut/videogamesales/data)
@@ -43,7 +48,7 @@ Table 1. Informasi Dataset
 | Jenis Dataset | Comma-Separated Values  (CSV) |
 | Ukuran Dataset |  1.36 MB |
 
-Dataset berisi 11 kolom yaitu **'Rank', 'Name', 'Platform', 'Year', 'Genre', 'Publisher', 'NA_Sales', 'EU_Sales', 'JP_Sales', 'Other_Sales', 'Global_Sales'** dan 16597 baris. Dengan 4 variabel bersifat kategorikal dan 7 variabel bersifat numerik. Berikut penjelasan lebih lengkap terhadap variabel dalam dataset
+Dataset merupakan koleksi data yang berfokus kepada penjualan video game. Dataset berisi berbagai fitur yang menggambarkan setiap game yang dijual, seperti  **'Rank', 'Name', 'Platform', 'Year', 'Genre', 'Publisher', 'NA_Sales', 'EU_Sales', 'JP_Sales', 'Other_Sales', 'Global_Sales'**.  Dataset berisi 11 kolom dan 16597 baris. Dengan 4 variabel bersifat kategorikal dan 7 variabel bersifat numerik. Tujuannya adalah untuk melakukan analisis prediksi Global Sales terhadap data penjualan video game. Berikut penjelasan lebih lengkap terhadap variabel dalam dataset
 
 ### Variabel-variabel pada Video Game Sales Dataset adalah sebagai berikut:
 - Rank: Merupakan identifier angka dari baris dataset
@@ -165,24 +170,26 @@ Algoritma Penelitian ini melakukan pemodelan dengan 4 algoritma, yaitu K-Nearest
 
 
 ## Evaluation
-Metrik evaluasi yang digunakan pada proyek ini adalah mean squared error (MSE) dan R square (coefficient of determination). 
-- Akurasi menentukan tingkat kemiripan antara hasil prediksi dengan nilai yang sebenarnya (y_test). 
-- Mean squared error (MSE) mengukur error dalam model statistik dengan cara menghitung rata-rata error dari kuadrat hasil aktual dikurang hasil prediksi. 
-- R square merupakan suatu nilai yang memperlihatkan seberapa besar variabel independen (eksogen) mempengaruhi variabel dependen (endogen). R squared merupakan angka yang berkisar antara 0 sampai 1 yang mengindikasikan besarnya kombinasi variabel independen secara bersama – sama mempengaruhi nilai variabel dependen. Nilai R-squared (R2) digunakan untuk menilai seberapa besar pengaruh variabel laten independen tertentu terhadap variabel laten dependen. Berikut formula MSE :
+Metrik evaluasi yang digunakan pada proyek ini adalah *mean squared error* (MSE) dan *R square* (*coefficient of determination*). 
+- **Akurasi** menentukan tingkat kemiripan antara hasil prediksi dengan nilai yang sebenarnya (y_test). 
+- ***Mean squared error* (MSE)** mengukur error dalam model statistik dengan cara menghitung rata-rata error dari kuadrat hasil aktual dikurang hasil prediksi. 
+- ***R Squared* (R2)** merupakan suatu nilai yang memperlihatkan seberapa besar variabel independen (eksogen) mempengaruhi variabel dependen (endogen). R squared merupakan angka yang berkisar antara 0 sampai 1 yang mengindikasikan besarnya kombinasi variabel independen secara bersama – sama mempengaruhi nilai variabel dependen. Nilai R-squared (R2) digunakan untuk menilai seberapa besar pengaruh variabel laten independen tertentu terhadap variabel laten dependen. Berikut formula MSE :
 
 Berikut hasil evaluasi
 - Akurasi
+- Table 5. Hasil Akurasi Setiap Model
 <table><thead><tr><th align="right"></th><th align="right">KNN</th><th align="right">RF</th><th align="right">Adaboost</th><th align="right">SVR</th></tr></thead><tbody><tr><td align="right">accuracy</td><td align="right">0.972663</td><td align="right">0.996812</td><td align="right">0.918662</td><td align="right">0.891426</td></tr></tbody></table>
 
 - Mean Squred Error (MSE)
-
-![dicoding mahcine learning](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/7395d2c3-7101-4394-a590-6577990be6ab)
+- Image 1. Hasil *Mean Squared Error* (MSE) pada setiap model untuk *data train* dan *data test*
+![*dicoding mahcine learning*](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/7395d2c3-7101-4394-a590-6577990be6ab)
 
 - R square
+- Table 6. Hasil *R Squared* Setiap Model
 <table><thead><tr><th align="right"></th><th align="right">KNN</th><th align="right">RF</th><th align="right">Adaboost</th><th align="right">SVR</th></tr></thead><tbody><tr><td align="right">r2_score</td><td align="right">0.941931</td><td align="right">0.967273</td><td align="right">0.866186</td><td align="right">0.891318</td></tr></tbody></table>
 
-Pada evaluasi dengan parameter Akurasi dan R Squared, semakin tinggi maka semakin bagus model yang sudah dilatih. Hasil evaluasi dengan nilai Akurasi dan R Squared tertinggi pada metode Random Forest. Sedangkan nilai Akurasi dan R Squared paling rendah pada metode Support Vector Regression. 
+### Kesimpulan
 
-Pada evaluasi dengan parameter Mean Squared Error (MSE), semakin rendah maka semakin bagus model yang sudah dilatih. Hasil evaluasi dengan nilai MSE terendah pada metode Random Forest. Sedangkan nilai MSE tertinggi pada metode Support Vector Regression. 
+Pada evaluasi dengan parameter Akurasi dan *R Squared*, semakin tinggi maka semakin bagus model yang sudah dilatih. Hasil evaluasi dengan nilai Akurasi dan *R Squared* tertinggi pada metode *Random Forest* yaitu akurasi sebesar 0.996812 (atau 99,68%) dan *R Squared Score* sebesar 0.967273 (atau 96,72%). Sedangkan nilai Akurasi dan *R Squared* paling rendah pada metode *Support Vector Regression* yaitu akurasi 0.891426 (atau 89,14%) dan *R Squared Score* 0.891318 (atau 89,13%).
 
-Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
+Dari 4 model algoritma yang digunakan, dapat disimpulkan hasil perbandingan serta visualisasi perbandingan prediksi 4 algoritma yaitu KNN, *Random Forest*, *AdaBoost*, dan *Support Vector Regression* sebagai berikut. Model *Random Forest* memiliki nilai error pada ***data test*** maupun ***data train*** yang paling kecil kemudian model dengan KNN memiliki nilai error yang sedikit lebih banyak daripada model *Random Forest* sedangkan model *AdaBoost* miliki lebih banyak nilai error dibandingkan *Random Forest* dan KNN namum model *Support Vector Regression* memiliki nilai error paling banyak dari ketiga model *Random Forest*, KNN, dan *AdaBoost*. Secara keseluruhan hasil MSE pada ***data train*** lebih kecil dibandingkan ***data test*** pada setiap model yang diuji.
