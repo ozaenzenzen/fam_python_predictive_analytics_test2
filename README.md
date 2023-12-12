@@ -175,6 +175,7 @@ Berikut hasil evaluasi
 <table><thead><tr><th align="right"></th><th align="right">KNN</th><th align="right">RF</th><th align="right">Adaboost</th><th align="right">SVR</th></tr></thead><tbody><tr><td align="right">accuracy</td><td align="right">0.972663</td><td align="right">0.996812</td><td align="right">0.918662</td><td align="right">0.891426</td></tr></tbody></table>
 
 - Mean Squred Error (MSE)
+
 ![dicoding mahcine learning](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/7395d2c3-7101-4394-a590-6577990be6ab)
 
 - R square
