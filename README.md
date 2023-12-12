@@ -255,7 +255,7 @@ Algoritma Penelitian ini melakukan pemodelan dengan 4 algoritma, yaitu K-Nearest
 Metrik evaluasi yang digunakan pada proyek ini adalah *mean squared error* (MSE) dan *R square* (*coefficient of determination*). 
 - **Akurasi** menentukan tingkat kemiripan antara hasil prediksi dengan nilai yang sebenarnya (y_test). 
 - ***Mean squared error* (MSE)** mengukur error dalam model statistik dengan cara menghitung rata-rata error dari kuadrat hasil aktual dikurang hasil prediksi. 
-- ***R Squared* (R2)** merupakan suatu nilai yang memperlihatkan seberapa besar variabel independen (eksogen) mempengaruhi variabel dependen (endogen). R squared merupakan angka yang berkisar antara 0 sampai 1 yang mengindikasikan besarnya kombinasi variabel independen secara bersama – sama mempengaruhi nilai variabel dependen. Nilai R-squared (R2) digunakan untuk menilai seberapa besar pengaruh variabel laten independen tertentu terhadap variabel laten dependen. Berikut formula MSE :
+- ***R Squared* (R2)** merupakan suatu nilai yang memperlihatkan seberapa besar variabel independen (eksogen) mempengaruhi variabel dependen (endogen). R squared merupakan angka yang berkisar antara 0 sampai 1 yang mengindikasikan besarnya kombinasi variabel independen secara bersama – sama mempengaruhi nilai variabel dependen. Nilai R-squared (R2) digunakan untuk menilai seberapa besar pengaruh variabel laten independen tertentu terhadap variabel laten dependen.[1] Berikut formula MSE :
 
 ### Berikut hasil evaluasi
 - Akurasi
