@@ -30,7 +30,7 @@ Berdasarkan *Problem Statements* yang telah diuraikan, terdapat beberapa *Goals*
 
 Berdasarkan *Goals* yang telah diuraikan, terdapat beberapa rincian *Solution Statements* yang akan dicapai sebagai berikut: 
 - Menggunakan teknik EDA (*Exploratory Data Analysis*) seperti Pendeskripsian Dataset, Penanganan *Missing Value*, *Univariate Analysis* dan *Multivariate Analysis*
-- Menggunakan model machine learning *K-Nearest Neighbors* (KNN), *Random Forest*, *Boosting Algorithm*, dan *Support Vector Regression* untuk dapat dilakukan perbandingan dari setiap metode *machine learning* yang digunakan
+- Menggunakan model *machine learning* *K-Nearest Neighbors* (KNN), *Random Forest*, *Boosting Algorithm*, dan *Support Vector Regression* untuk dapat dilakukan perbandingan dari setiap metode *machine learning* yang digunakan
 - Membuat model *machine learning*
 - Menggunakan metode evaluasi *Mean Squared Error* dan *R2 / R Squared Score*
 
@@ -86,7 +86,7 @@ Table 3. Informasi Missing Value
 Hasil: Pada tahap ini digunakan
 - teknik imputasi berdasarkan nilai rata-rata (*mean*) untuk kolom `Year`
 - teknik imputasi berdasarkan nilai terbanyak (*most frequent*) untuk kolom `Publisher`
-menggunakan library `from sklearn.impute import SimpleImputer`. Setelah proses imputasi, nilai null sudah tidak ditemukan
+menggunakan *library* `from sklearn.impute import SimpleImputer`. Setelah proses imputasi, nilai null sudah tidak ditemukan
 
 ### *Check and Drop Outlier*:
 Pada tahap ini dilakukan pengecekan terhadap outlier pada setiap kolom numerik yaitu **Year, NA_Sales, EU_Sales, JP_Sales, dan Other_Sales**. Kemudian dilakukan penghilangan baris yang memiliki outlier menggunakan metode *Inter Quartile Range* (IQR) sehingga didapatkan hasil 11926 baris dan 11 kolom
@@ -152,44 +152,44 @@ Langkah dalam persiapan data dijabarkan dalam beberapa poin
 2. Menyimpan dataset ke dalam Google Drive
     - Proses: Menyimpan dataset ke dalam penyimpanan cloud Google Drive
     - Alasan: Penyimpanan dataset dalam Google Drive agar mempermudah proses pemanggilan data dalam proses penelitian
-3. Melakukan pemanggilan library pendukung
-    - Proses: Melakukan pengimporan beberapa library dari numpy, matplotlib, pandas, dan seaborn dengan `import`
+3. Melakukan pemanggilan *library* pendukung
+    - Proses: Melakukan pengimporan beberapa *library* dari numpy, matplotlib, pandas, dan seaborn dengan `import`
     - Alasan: Ditujukan untuk mendukung proses pengolahan, pelatihan, dan evaluasi data seperti pengolahan, visualisasi, dan proses matematis
-4. Melakukan mounting Google Colab dengan Google Drive 
-    - Proses: Melakukan koneksi antar platform Google Colab sebagai media pengolahan data dan Google Drive sebagai media penyimpanan data. Menggunakan library `from google.colab import drive` dan menggunakan kode `drive.mount('/content/drive')`
+4. Melakukan *mounting* Google Colab dengan Google Drive 
+    - Proses: Melakukan koneksi antar platform Google Colab sebagai media pengolahan data dan Google Drive sebagai media penyimpanan data. Menggunakan *library* `from google.colab import drive` dan menggunakan kode `drive.mount('/content/drive')`
     - Alasan: Agar proses persiapan data dan pengolahan model bisa dilakukan dari data yang disimpan dalam Google Drive dan media pengolahan data di Google Colab
 5. Memanggil dataset 
-    - Proses: Melakukan pemanggilan dataset dengan library pandas `pd.read_csv(url)`
+    - Proses: Melakukan pemanggilan dataset dengan *library* pandas `pd.read_csv(url)`
     - Alasan: Agar dataset siap digunakan pada proses pengolahan dalam Google Colab
 6. Melakukan pengecekan informasi dataset
     - Proses: Pengecekan informasi dataset terbagi menjadi sub tahap seperti
-        - menggunakan `dataset.info()` untuk menampilkan jumlah baris, missing value, dan tipe data dari dataset
+        - menggunakan `dataset.info()` untuk menampilkan jumlah baris, *missing value*, dan tipe data dari dataset
         - menggunakan `dataset.describe()` untuk mendeskripsikan parameter singkat pada dataset
-            - Count atau jumlah baris dari setiap kolom
-            - Mean atau rata-rata dari setiap kolom
+            - *Count* atau jumlah baris dari setiap kolom
+            - *Mean* atau rata-rata dari setiap kolom
             - Standar deviasi dari setiap kolom
-            - Nilai minimum / terkecil dari setiap kolom
+            - Nilai *minimum* / terkecil dari setiap kolom
             - Nilai kuartil pertama atau 25% dari setiap kolom
             - Nilai kuartil kedua atau 50% atau median dari setiap kolom
             - Nilai kuartil ketiga atau 75% dari setiap kolom
-            - Nilai maximum / terbesar dari setiap kolom
+            - Nilai *maximum* / terbesar dari setiap kolom
         - menggunakan `dataset.column` untuk mengetahui kolom yang tersedia pada dataset
     - Alasan: Untuk mengetahui informasi dasar dari dataset yang akan digunakan sehingga dapat ditentukan langkah selanjutnya dalam melakukan persiapan data
-7. Melakukan pengecekan missing value dalam data (bisa NULL atau 0) 
+7. Melakukan pengecekan *missing value* dalam data (bisa NULL atau 0) 
     - Proses: Menggunakan `dataset.isnull().sum()` untuk mendapatkan informasi apakah terdapat data yang bersifat null
     - Alasan: Untuk mengetahui informasi missing value dari dataset yang akan digunakan sehingga dapat ditentukan langkah selanjutnya dalam melakukan persiapan data
-8. Melakukan imputasi missing value 
+8. Melakukan imputasi *missing value* 
     - Proses: Menggunakan `from sklearn.impute import SimpleImputer` menggunakan metode khusus dalam melakukan imputasi terhadap kolom yang terdapat missing value. 
-        - Imputasi menggunakan nilai rata-rata (mean) untuk kolom `Year`
-        - Imputasi menggunakan nilai terbanyak (most_frequent) untuk kolom `Publisher`
+        - Imputasi menggunakan nilai rata-rata (*mean*) untuk kolom `Year`
+        - Imputasi menggunakan nilai terbanyak (*most_frequent*) untuk kolom `Publisher`
     - Alasan: Agar proses pengolahan lancar karena missing value dalam dataset sudah diimputasi / diisi dengan metode khusus yang dipilih
-9. Melakukan outlier analisis & memvisualisasikan persebaran data pada setiap kolom untuk mengetahui outlier = sebuah data atau observasi yang menyimpang secara ekstrim dari rata-rata sekumpulan data yang ada
+9. Melakukan *outlier analysis* & memvisualisasikan persebaran data pada setiap kolom untuk mengetahui *outlier* = sebuah data atau observasi yang menyimpang secara ekstrim dari rata-rata sekumpulan data yang ada
     - Proses: Menggunakan fungsi `boxplot()` dari seaborn untuk mendapatkan informasi visualisasi persebaran data dari setiap kolom
     - Alasan: Untuk mengetahui informasi persebaran nilai apakah terdapat nilai outlier dari dataset yang akan digunakan sehingga dapat ditentukan langkah selanjutnya dalam melakukan persiapan data
-10. Drop Outlier yaitu menangani outlier pada dataset. Disini digunakan metode Inter Quartile Range (IQR)
-    - Proses: Menggunakan metode Inter Quartile Range (IQR) untuk menghilangkan nilai outlier pada dataset sehingga didapatkan informasi dataset 11926 baris dan 11 kolom
-    - Alasan: Proses penghilangan outlier dilakukan karena terdapat nilai outlier pada kolom **Year** 
-11. Melakukan univariate analysis yaitu mengeksplorasi dan menjelaskan setiap variabel dalam kumpulan data secara terpisah untuk 1 jenis variabel / kolom
+10. *Drop Outlier* yaitu menangani outlier pada dataset. Disini digunakan metode *Inter Quartile Range* (IQR)
+    - Proses: Menggunakan metode *Inter Quartile Range* (IQR) untuk menghilangkan nilai *outlier* pada dataset sehingga didapatkan informasi dataset 11926 baris dan 11 kolom
+    - Alasan: Proses penghilangan outlier dilakukan karena terdapat nilai *outlier* pada kolom **Year** 
+11. Melakukan *univariate analysis* yaitu mengeksplorasi dan menjelaskan setiap variabel dalam kumpulan data secara terpisah untuk 1 jenis variabel / kolom
     - Proses: Proses dalam tahap ini ditujukan untuk mengeksplorasi dan menjelaskan setiap variabel dalam kumpulan data secara terpisah untuk 1 jenis variabel / kolom. Tahap ini terbagi menjadi sub tahap seperti berikut
         - Membagi kolom yang bersifat numerk dan kategorikal 
         - Menyimpan kolom ke dalam masing-masing variabel yaitu `numerical_features` dan `categorical_features`
@@ -204,8 +204,8 @@ Langkah dalam persiapan data dijabarkan dalam beberapa poin
             - Table 6. hasil univariate analysis pada kolom kategorik `Publisher`. Ditampilkan 5 teratas dan 5 terbawah karena terdapat 523 kategori
             <table><thead><tr><th>Data</th><th>jumlah sampel</th><th>persentase</th></tr></thead><tbody><tr><td>Electronic Arts</td><td>866</td><td>7.3</td></tr><tr><td>Activision</td><td>734</td><td>6.2</td></tr><tr><td>Ubisoft</td><td>719</td><td>6.0</td></tr><tr><td>THQ</td><td>568</td><td>4.8</td></tr><tr><td>Namco Bandai Games</td><td>566</td><td>4.7</td></tr><tr><td>...</td><td>...</td><td>...</td></tr><tr><td>Marvel Entertainment</td><td>1</td><td>0.0</td></tr><tr><td>Illusion Softworks</td><td>1</td><td>0.0</td></tr><tr><td>Phantagram</td><td>1</td><td>0.0</td></tr><tr><td>The Learning Company</td><td>1</td><td>0.0</td></tr><tr><td>UIG Entertainment</td><td>1</td><td>0.0</td></tr><tr><td></td><td></td><td></td></tr><tr><td>[523 rows x 2 columns]</td><td></td><td></td></tr></tbody></table>
         - Melakukan visualisasi persebaran nilai dalam bentuk grafik untuk menginformasikan data pada kolom numerik yaitu **'Rank', 'Year', 'NA_Sales', 'EU_Sales', 'JP_Sales', 'Other_Sales', 'Global_Sales'**
-    - Alasan: Untuk mengetahui informasi persebaran nilai pada kolom kategorikal dan numerikal secara spesifik univariate per kolom pada dataset yang digunakan sehingga dapat ditentukan langkah selanjutnya dalam melakukan persiapan data
-12. Melakukan multivariate analysis yaitu mengeksplorasi dan menjelaskan setiap variabel dalam kumpulan data secara terpisah untuk 2 atau lebih jenis variabel / kolom
+    - Alasan: Untuk mengetahui informasi persebaran nilai pada kolom kategorikal dan numerikal secara spesifik *univariate* per kolom pada dataset yang digunakan sehingga dapat ditentukan langkah selanjutnya dalam melakukan persiapan data
+12. Melakukan *multivariate analysis* yaitu mengeksplorasi dan menjelaskan setiap variabel dalam kumpulan data secara terpisah untuk 2 atau lebih jenis variabel / kolom
     - Proses: Pada tahap ini terbagi menjadi beberapa sub tahap sebagai berikut
         - Visualisasi data kategorik `Genre`, `Publisher` dan `Platform` terhadap data numerik yang dipilih `Year`, `NA_Sales`, `EU_Sales`, `JP_Sales`, dan `Other_Sales` menggunakan fungsi `pairplot()`
         - Visualisasi antar data kolom numerik menggunakan fungsi `pairplot()`
@@ -214,16 +214,16 @@ Langkah dalam persiapan data dijabarkan dalam beberapa poin
 13. Melakukan penghilangan kolom yang tidak diperlukan sesuai analisis masalah dan tujuan penelitian
     - Proses: Menghilangkan kolom fitur yang tidak diperlukan yaitu `Rank` menggunakan fungsi `drop()`
     - Alasan: Korelasi kolom `Rank` terhadap dataset sangat kecil karena secara sifatnya yang hanya sebuah identifier unik pada baris kolom
-14. Melakukan Encoding Categorical Features yaitu memberikan alias dalam bentuk numerik kepada kolom yang bersifat kategorikal
+14. Melakukan *Encoding Categorical Features* yaitu memberikan alias dalam bentuk numerik kepada kolom yang bersifat kategorikal
     - Proses: Melakukan pemberian alias terhadap kolom kategorik agar bisa dapat berbentuk numerik dan memisahkan data kategorik sebagai kolom terpisah dengan subtahap sebagai berikut
-        - Melakukan encode terhadap kolom kategorik
+        - Melakukan *encode* terhadap kolom kategorik
         - Memisahkan data kategorik sebagai kolom terpisah
         - Menggabungkan kolom hasil encode ke dalam dataset utama
         - Menghapus kolom kategorik yang lama
     - Alasan: Pemberian alias terhadap kolom kategorik `Genre`, `Publisher` dan `Platform` ditujukan agar kolom fitur tersebut dapat digunakan dalam proses pemodelan
-15. Melakukan pembagian dataset menjadi data train dan data test dalam pembagian yang ditentukan
-    - Proses: Melakukan pembagian data test dan data train dengan pembagian 10% data test dan 90% data train menggunakan fungsi `train_test_split(X, y, test_size = 0.1, random_state = 123)`
-    - Alasan: Pembagian dataset disesuaikan agar tidak terjadi underfit atau overfit pada proses pemodelan yang akan dilakukan dengan metode machine learning
+15. Melakukan pembagian dataset menjadi *data train* dan *data test* dalam pembagian yang ditentukan
+    - Proses: Melakukan pembagian *data test* dan *data train* dengan pembagian 10% *data test* dan 90% *data train* menggunakan fungsi `train_test_split(X, y, test_size = 0.1, random_state = 123)`
+    - Alasan: Pembagian dataset disesuaikan agar tidak terjadi underfit atau overfit pada proses pemodelan yang akan dilakukan dengan metode *machine learning*
 16. Melakukan standarisasi atau perubahan skala nilai pada suatu kolom sesuai skala yang diinginkan. Fitur kolom yang menjadi tujuan adalah kolom `Global_Sales`
     - Proses: Melakukan standarisasi nilai pada kolom `'Year', 'NA_Sales', 'EU_Sales', 'JP_Sales', 'Other_Sales'` dengan menggunakan funsi dari sklearn yaitu `StandardScaler`
     - Alasan: Proses standarisasi data dilakukan agar rentang nilai pada kolom `'Year', 'NA_Sales', 'EU_Sales', 'JP_Sales', 'Other_Sales'` tidak terlampau jauh dan agar menyelaraskan dengan kolom dataset lain
@@ -231,30 +231,30 @@ Langkah dalam persiapan data dijabarkan dalam beberapa poin
 ## Modeling
 Algoritma Penelitian ini melakukan pemodelan dengan 4 algoritma, yaitu K-Nearest Neighbour, Random Forest, dan Support Vector Regression
 
-- **K-Nearest Neighbor**: K-Nearest Neighbor merupakan salah satu algoritma supervised machine learning yang memiliki cara kerja membandingkan jarak satu sampel ke sampel pelatihan/training lain dengan menentukan sejumlah k tetangga terdekat [3]. Karena proyek ini bertujuan untuk proses regresi, maka digunakan metode KNN untuk regresi yaitu K Neighbors Regressor. Proyek ini menggunakan library `sklearn.neighbors.KNeighborsRegressor` dengan memasukkan X_train dan y_train dalam membangun model. Parameter yang digunakan pada proyek ini adalah :
+- **K-Nearest Neighbor**: K-Nearest Neighbor merupakan salah satu algoritma *supervised machine learning* yang memiliki cara kerja membandingkan jarak satu sampel ke sampel pelatihan/*training* lain dengan menentukan sejumlah k tetangga terdekat [3]. Karena proyek ini bertujuan untuk proses regresi, maka digunakan metode KNN untuk regresi yaitu *K Neighbors Regressor*. Proyek ini menggunakan *library* `sklearn.neighbors.KNeighborsRegressor` dengan memasukkan X_train dan y_train dalam membangun model. Parameter yang digunakan pada proyek ini adalah :
 
     - `n_neighbors = Jumlah k tetangga tedekat.`
 
-- **Random Forest**: Random forest adalah salah satu metode dalam machine learning dengan metode ensemble. Cara kerja metode ini adalah dengan membangun banyak decision tree pada waktu pelatihan/training [3]. Karena proyek ini bertujuan untuk proses regresi, maka digunakan metode Random Forest untuk regresi yaitu Random Forest Regressor. Proyek ini menggunakan `sklearn.ensemble.RandomForestRegressor` dengan memasukkan X_train dan y_train dalam membangun model. Parameter yang digunakan pada proyek ini adalah :
+- **Random Forest**: *Random forest* adalah salah satu metode dalam *machine learning* dengan metode *ensemble*. Cara kerja metode ini adalah dengan membangun banyak *decision tree* pada waktu pelatihan/*training* [3]. Karena proyek ini bertujuan untuk proses regresi, maka digunakan metode Random Forest untuk regresi yaitu *Random Forest Regressor*. Proyek ini menggunakan `sklearn.ensemble.RandomForestRegressor` dengan memasukkan X_train dan y_train dalam membangun model. Parameter yang digunakan pada proyek ini adalah :
 
     - `n_estimators = Jumlah maksimum estimator di mana boosting dihentikan.`
     - `max_depth = Kedalaman maksimum setiap tree.`
     - `random_state = Mengontrol seed acak yang diberikan pada setiap base_estimator pada setiap iterasi boosting.`
 
-- **Adaboost**: AdaBoost atau Adaptive Boosting adalah metode dalam machine learning dengan metode ensemble. Algoritma yang paling umum digunakan dengan AdaBoost adalah decision tree satu tingkat yang berarti memiliki pohon Keputusan dengan hanya 1 split.[4] Algoritma ini bertujuan untuk meningkatkan performa atau akurasi prediksi dengan cara menggabungkan beberapa model sederhana dan dianggap lemah secara berurutan sehingga membentuk suatu model yang kuat.[5] Proyek ini menggunakan `sklearn.ensemble.AdaBoostRegressor` dengan memasukkan X_train dan y_train dalam membangun model. Parameter yang digunakan pada proyek ini adalah :
+- **Adaboost**: *AdaBoost* atau *Adaptive Boosting* adalah metode dalam *machine learning* dengan metode *ensemble*. Algoritma yang paling umum digunakan dengan *AdaBoost* adalah *decision tree* satu tingkat yang berarti memiliki pohon Keputusan dengan hanya 1 split.[4] Algoritma ini bertujuan untuk meningkatkan performa atau akurasi prediksi dengan cara menggabungkan beberapa model sederhana dan dianggap lemah secara berurutan sehingga membentuk suatu model yang kuat.[5] Proyek ini menggunakan `sklearn.ensemble.AdaBoostRegressor` dengan memasukkan X_train dan y_train dalam membangun model. Parameter yang digunakan pada proyek ini adalah :
 
     - `n_estimators = Jumlah maksimum estimator di mana boosting dihentikan.`
     - `learning_rate = Learning rate memperkuat kontribusi setiap regressor.`
     - `random_state = Mengontrol seed acak yang diberikan pada setiap base_estimator pada setiap iterasi boosting.`
     
-- **Support Vector Machine**: Support Vector Machine (SVM) adalah metode supervised machine learning yang digunakan untuk tugas klasifikasi dan regresi. Tujuan utama SVM adalah untuk menemukan optimal hyperplane yang memisahkan titik data milik kelas berbeda dalam ruang fitur [6]. Ini sangat efektif dalam ruang berdimensi tinggi dan banyak digunakan untuk tugas-tugas seperti klasifikasi gambar, klasifikasi teks, dan banyak lagi. Karena proyek ini bertujuan untuk proses regresi, maka digunakan metode SVM untuk regresi yaitu Support Vector Regression. Proyek ini menggunakan `from sklearn.svm import SVR` dengan memasukkan X_train dan y_train dalam membangun model.
+- **Support Vector Machine**: *Support Vector Machine* (SVM) adalah metode *supervised machine learning* yang digunakan untuk tugas klasifikasi dan regresi. Tujuan utama SVM adalah untuk menemukan optimal hyperplane yang memisahkan titik data milik kelas berbeda dalam ruang fitur [6]. Ini sangat efektif dalam ruang berdimensi tinggi dan banyak digunakan untuk tugas-tugas seperti klasifikasi gambar, klasifikasi teks, dan banyak lagi. Karena proyek ini bertujuan untuk proses regresi, maka digunakan metode SVM untuk regresi yaitu *Support Vector Regression*. Proyek ini menggunakan `from sklearn.svm import SVR` dengan memasukkan X_train dan y_train dalam membangun model.
 
 
 ## Evaluation
 ### Metrik Penilaian Evaluasi
 Metrik evaluasi yang digunakan pada proyek ini adalah *mean squared error* (MSE) dan *R square* (*coefficient of determination*). 
 - **Akurasi** menentukan tingkat kemiripan antara hasil prediksi dengan nilai yang sebenarnya (y_test). 
-- ***Mean squared error* (MSE)** mengukur error dalam model statistik dengan cara menghitung rata-rata error dari kuadrat hasil aktual dikurang hasil prediksi. 
+- ***Mean squared error* (MSE)** mengukur error dalam model statistik dengan cara menghitung rata-rata *error* dari kuadrat hasil aktual dikurang hasil prediksi. 
 - ***R Squared* (R2)** merupakan suatu nilai yang memperlihatkan seberapa besar variabel independen (eksogen) mempengaruhi variabel dependen (endogen). R squared merupakan angka yang berkisar antara 0 sampai 1 yang mengindikasikan besarnya kombinasi variabel independen secara bersama – sama mempengaruhi nilai variabel dependen. Nilai R-squared (R2) digunakan untuk menilai seberapa besar pengaruh variabel laten independen tertentu terhadap variabel laten dependen.[1] Berikut formula MSE :
 
 ### Berikut hasil evaluasi
@@ -264,13 +264,13 @@ Metrik evaluasi yang digunakan pada proyek ini adalah *mean squared error* (MSE)
 
     <table><thead><tr><th align="right"></th><th align="right">KNN</th><th align="right">RF</th><th align="right">Adaboost</th><th align="right">SVR</th></tr></thead><tbody><tr><td align="right">accuracy</td><td align="right">0.972663</td><td align="right">0.996812</td><td align="right">0.918662</td><td align="right">0.891426</td></tr></tbody></table>
 
-- Mean Squred Error (MSE)
+- *Mean Squred Error* (MSE)
 
     Image 7. Hasil *Mean Squared Error* (MSE) pada setiap model untuk *data train* dan *data test*
 
     ![*dicoding mahcine learning*](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/7395d2c3-7101-4394-a590-6577990be6ab)
 
-- R square
+- *R squared*
 
     Table 8. Hasil *R Squared* Setiap Model
 
