@@ -98,26 +98,26 @@ Pada tahap ini dilakukan pengecekan terhadap outlier pada setiap kolom numerik y
 - Kolom Genre
 
     Persebaran kolom Genre terdapat 12 nilai yang berbeda. Nilai tertinggi didapatkan pada value `Action` sebanyak 2409 dengan persentase 20.2% dan terendah pada value `Puzzle` sebanyak 448 dengan persentase 3.8%
-    
-    Image 1. Pesebaran Kolom Genre
 
     ![Kolom Genre](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/11fd91ca-73a2-4054-b073-9765e736f296)
+
+    Image 1. Pesebaran Kolom Genre
 
 - Kolom Publisher
 
     Persebaran kolom Publisher terdapat 523 nilai yang berbeda. Nilai tertinggi didapatkan pada value `Electronic Arts` sebanyak 866 dengan persentase 7.3% dan nilai terendah pada beberapa value sebanyak 1
 
-    Image 2. Pesebaran Kolom Publisher
-
     ![Kolom Publisher](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/b06e4f72-6d68-47a9-b527-487f1063cf76)
+
+    Image 2. Pesebaran Kolom Publisher
 
 - Kolom Platform
 
     Persebaran kolom Platform terdapat 30 nilai yang berbeda. Nilai tertinggi didapatkan pada value `DS` sebanyak 1754 dengan persentase 14.7% dan nilai terendah pada beberapa value yaitu `PCFX`, `NES`, `WS` dan `TG16` sebanyak 1
-    
-    Image 3. Pesebaran Kolom Platform
 
     ![Kolom Platform](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/ed9bdf9c-f486-481e-8aaa-b458f6307ec2)
+
+    Image 3. Pesebaran Kolom Platform
 
 
 #### Kolom Numerik
@@ -126,22 +126,25 @@ Persebaran kolom numerik terdapat pada 7 kolom yaitu **'Rank', 'Year', 'NA_Sales
 - Pada kolom `Year` nilai terendah pada tahun 1980 dan untuk nilai tertinggi pada tahun 2020
 - Pada kolom `NA_Sales`, `EU_Sales`, `JP_Sales`, `Other_Sales`, `Global_Sales` memilki rentang nilai antara 0 sampai 82.74 (Global_Sales)
 
-Image 4. Pesebaran Kolom Numerik
 ![Kolom Numerik](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/f23d31ad-91c6-4b91-83c5-9d85587ae7f7)
+
+Image 4. Pesebaran Kolom Numerik
 
 ### *Multivariate Analysis*:
 *Multivariate Analysis* yaitu tahap mengeksplorasi dan menjelaskan setiap variabel dalam kumpulan data secara terpisah untuk 2 atau lebih jenis variabel / kolom. Tahap ini dilakukan dengan tujuan untuk mengetahui persebaran dan informasi nilai pada data antara kolom dengan kolom lainnya sehingga dapat dilakukan proses persiapan data yang sesuai.
 
 Pada tahap ini divisualisasikan persebaran kolom `EU_Sales` terhadap kolom kategorik `Genre`, `Publisher`, dan `Platform`
 
-Image 5. Persebaran kolom `EU_Sales` terhadap kolom kategorik `Genre`, `Publisher`, dan `Platform`
-
 ![xx 5](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/30b387c2-edb6-4288-8ecb-dcb08107e08c)
 ![download (1)](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/ef135b47-164a-4dc7-b800-2c03efc1861b)
 ![download](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/2c59895c-2ade-44e6-9d60-968aaef110c2)
 
-Image 6. Visualisasi persebaran antar kolom numerik
+Image 5. Persebaran kolom `EU_Sales` terhadap kolom kategorik `Genre`, `Publisher`, dan `Platform`
+
+Visualisasi persebaran antar kolom numerik
 ![Visualisasi persebaran antar kolom numerik](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/560dde9a-df97-432f-a0b0-c38ccd410962)
+
+Image 6. Visualisasi persebaran antar kolom numerik
 
 
 ## Data Preparation
@@ -266,9 +269,9 @@ Metrik evaluasi yang digunakan pada proyek ini adalah *mean squared error* (MSE)
 
 - *Mean Squred Error* (MSE)
 
-    Image 7. Hasil *Mean Squared Error* (MSE) pada setiap model untuk *data train* dan *data test*
-
     ![*dicoding mahcine learning*](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/7395d2c3-7101-4394-a590-6577990be6ab)
+
+    Image 7. Hasil *Mean Squared Error* (MSE) pada setiap model untuk *data train* dan *data test*
 
 - *R squared*
 
