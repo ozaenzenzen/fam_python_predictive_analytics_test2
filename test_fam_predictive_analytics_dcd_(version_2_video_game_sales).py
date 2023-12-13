@@ -179,17 +179,21 @@ count = dataset[feature].value_counts()
 percent = 100*dataset[feature].value_counts(normalize=True)
 df = pd.DataFrame({'jumlah sampel':count, 'persentase':percent.round(1)})
 print(df)
-count.plot(kind='bar', title=feature);
+count.plot(kind='bar', title=feature, rot=45);
 
 """Pada tahap baris kode ini ditujukan mendeskripsikan jumlah sampel dan persentase kolom kategorik dari `Pubsliher`"""
 
 #feature Pubsliher
 feature = categorical_features[2]
 count = dataset[feature].value_counts()
+count_for_plot_highest = dataset[feature].value_counts().head(10)
+count_for_plot_lowest = dataset[feature].value_counts().tail(10)
 percent = 100*dataset[feature].value_counts(normalize=True)
 df = pd.DataFrame({'jumlah sampel':count, 'persentase':percent.round(1)})
 print(df)
-count.plot(kind='bar', title=feature);
+count_for_plot_highest.plot(kind='bar', title=feature + ' ' + '(10 Highest)', rot=45, figsize=(12,5), fontsize=8)
+
+count_for_plot_lowest.plot(kind='bar', title=feature + ' ' + '(10 Lowest)', rot=45, figsize=(12,5), fontsize=8)
 
 """Pada tahap baris kode ini ditujukan mendeskripsikan jumlah sampel dan persentase kolom kategorik dari `Platform`"""
 
