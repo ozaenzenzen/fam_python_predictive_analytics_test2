@@ -4,9 +4,9 @@
 ***
 ### Latar Belakang
 
-Dalam ruang lingkup penjualan, setiap barang keluar dan masuk harus bisa terdokumentasi. Barang yang masuk merupakan barang yang dibeli dan disimpan oleh pihak penjual dan barang yang keluar merupakan barang yang dijual oleh pihak penjual. Pendokumentasian barang keluar dari dan masuk ke pihak penjual harus dilakukan agar didapatkan informasi dari hasil penjualan yang telah dilakukan. Pendokumentasian juga dapat membantu dalam merencanakan stok, promosi, dan pengembangan produk lebih lanjut.[2] Dengan informasi yang telah terdokumentasi, maka dapat dilakukan alokasi sumber daya secara lebih baik lagi. Pada kasus ini didapatkan sebuah dokumentasi barang keluar atau barang terjual yaitu data penjualan video game.
+Dalam ruang lingkup penjualan, setiap barang keluar dan masuk harus bisa terdokumentasi. Barang yang masuk merupakan barang yang dibeli dan disimpan oleh pihak penjual dan barang yang keluar merupakan barang yang dijual oleh pihak penjual. Pendokumentasian barang keluar dari dan masuk ke pihak penjual harus dilakukan agar didapatkan informasi dari hasil penjualan yang telah dilakukan. Pendokumentasian juga dapat membantu dalam merencanakan stok, promosi, dan pengembangan produk lebih lanjut.[1] Dengan informasi yang telah terdokumentasi, maka dapat dilakukan alokasi sumber daya secara lebih baik lagi. Pada kasus ini didapatkan sebuah dokumentasi barang keluar atau barang terjual yaitu data penjualan video game.
 
-Teknologi ditujukan untuk membantu persoalan manusia. Pada saat ini sebuah teknologi berkembang pesat dalam bidang dunia teknologi informasi yaitu *Machine Learning*.[7] *Machine learning* adalah sebuah teknologi yang dikembangkan agar mesin / komputer dapat bisa belajar dengan sendirinya tanpa arahan dari penggunanya. Tentunya teknologi *machine learning* dapat digunakan untuk membantu manusia dalam mengolah data dan menarik informasi dari sebuah data sehingga manusia bisa lebih fokus dalam pengembangan bisnisnya.
+Teknologi ditujukan untuk membantu persoalan manusia. Pada saat ini sebuah teknologi berkembang pesat dalam bidang dunia teknologi informasi yaitu *Machine Learning*.[2] *Machine learning* adalah sebuah teknologi yang dikembangkan agar mesin / komputer dapat bisa belajar dengan sendirinya tanpa arahan dari penggunanya. Tentunya teknologi *machine learning* dapat digunakan untuk membantu manusia dalam mengolah data dan menarik informasi dari sebuah data sehingga manusia bisa lebih fokus dalam pengembangan bisnisnya.
 
 Dengan bantuan penggunaan *Machine Learning*, pengolahan dan penarikan informasi dari sebuah data menjadi lebih efektif dan efisien. Pada penelitian ini ditujukan membandingkan kemampuan metode *machine learning* dalam memetakan penjualan global (*Global Sales*) dari data *Video Game Sales*. Selanjutnya, metode terbaik dari penelitian ini dapat digunakan untuk melakukan pemodelan terhadap data penjualan *video game* yang lain.
 
@@ -81,6 +81,12 @@ Table 2. Informasi Dataset
 
     Persebaran kolom Genre terdapat 12 nilai yang berbeda. Nilai tertinggi didapatkan pada value `Action` sebanyak 2409 dengan persentase 20.2% dan terendah pada value `Puzzle` sebanyak 448 dengan persentase 3.8%
     
+    Didapatkan hasil pada kolom `Genre` pada Table 3
+
+    Table 3. hasil univariate analysis pada kolom kategorik `country`
+
+    <table><thead><tr><th>Data</th><th>jumlah sampel</th><th>persentase</th></tr></thead><tbody><tr><td>Action</td><td>2409</td><td>20.2</td></tr><tr><td>Sports</td><td>1620</td><td>13.6</td></tr><tr><td>Misc</td><td>1336</td><td>11.2</td></tr><tr><td>Adventure</td><td>1120</td><td>9.4</td></tr><tr><td>Racing</td><td>936</td><td>7.8</td></tr><tr><td>Shooter</td><td>909</td><td>7.6</td></tr><tr><td>Role-Playing</td><td>863</td><td>7.2</td></tr><tr><td>Simulation</td><td>648</td><td>5.4</td></tr><tr><td>Platform</td><td>591</td><td>5.0</td></tr><tr><td>Fighting</td><td>541</td><td>4.5</td></tr><tr><td>Strategy</td><td>505</td><td>4.2</td></tr><tr><td>Puzzle</td><td>448</td><td>3.8</td></tr></tbody></table>
+    
     Image 1. Pesebaran Kolom Genre
 
     ![Kolom Genre](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/45262802-f55b-4e8c-96aa-5b1754b08f9d)
@@ -88,18 +94,29 @@ Table 2. Informasi Dataset
 - Kolom Publisher
 
     Persebaran kolom Publisher terdapat 523 nilai yang berbeda. Nilai tertinggi didapatkan pada value `Electronic Arts` sebanyak 866 dengan persentase 7.3% dan nilai terendah pada beberapa value sebanyak 1. Berikut divisualisasikan 10 nilai tertinggi dari kolom `Publisher` dan 10 nilai terendah
+    
+    Didapatkan hasil pada kolom `Publisher` pada Table 4
+
+    Table 4. hasil univariate analysis pada kolom kategorik `Publisher`. Ditampilkan 5 teratas dan 5 terbawah karena terdapat 523 kategori
+
+    <table><thead><tr><th>Data</th><th>jumlah sampel</th><th>persentase</th></tr></thead><tbody><tr><td>Electronic Arts</td><td>866</td><td>7.3</td></tr><tr><td>Activision</td><td>734</td><td>6.2</td></tr><tr><td>Ubisoft</td><td>719</td><td>6.0</td></tr><tr><td>THQ</td><td>568</td><td>4.8</td></tr><tr><td>Namco Bandai Games</td><td>566</td><td>4.7</td></tr><tr><td>...</td><td>...</td><td>...</td></tr><tr><td>Marvel Entertainment</td><td>1</td><td>0.0</td></tr><tr><td>Illusion Softworks</td><td>1</td><td>0.0</td></tr><tr><td>Phantagram</td><td>1</td><td>0.0</td></tr><tr><td>The Learning Company</td><td>1</td><td>0.0</td></tr><tr><td>UIG Entertainment</td><td>1</td><td>0.0</td></tr><tr><td></td><td></td><td></td></tr><tr><td>[523 rows x 2 columns]</td><td></td><td></td></tr></tbody></table>
 
     Image 2. Pesebaran Kolom Publisher (10 Highest)
 
-    ![Kolom Publisher highest](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/8e20101f-61a4-4306-906b-08359cedc112)
+    ![download (1)](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/0087a29a-5456-4cf6-9673-751f247626db)
 
     Image 3. Pesebaran Kolom Publisher (10 Lowest)
 
-    ![Kolom Publisher lowest](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/acac4769-bc44-450d-8af9-a8d15b817411)
+    ![download (2)](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/c10717a4-3d58-41ca-8e9c-5c9c72043aba)
 
 - Kolom Platform
 
     Persebaran kolom Platform terdapat 30 nilai yang berbeda. Nilai tertinggi didapatkan pada value `DS` sebanyak 1754 dengan persentase 14.7% dan nilai terendah pada beberapa value yaitu `PCFX`, `NES`, `WS` dan `TG16` sebanyak 1
+    Didapatkan hasil pada kolom `Platform` pada Table 5
+
+    Table 5. hasil univariate analysis pada kolom kategorik `Platform`
+
+    <table><thead><tr><th>Data</th><th>jumlah sampel</th><th>persentase</th></tr></thead><tbody><tr><td>DS</td><td>1754</td><td>14.7</td></tr><tr><td>PS2</td><td>1466</td><td>12.3</td></tr><tr><td>Wii</td><td>1035</td><td>8.7</td></tr><tr><td>X360</td><td>928</td><td>7.8</td></tr><tr><td>PSP</td><td>906</td><td>7.6</td></tr><tr><td>PC</td><td>821</td><td>6.9</td></tr><tr><td>PS3</td><td>814</td><td>6.8</td></tr><tr><td>XB</td><td>735</td><td>6.2</td></tr><tr><td>PS</td><td>730</td><td>6.1</td></tr><tr><td>GBA</td><td>681</td><td>5.7</td></tr><tr><td>GC</td><td>479</td><td>4.0</td></tr><tr><td>3DS</td><td>344</td><td>2.9</td></tr><tr><td>PSV</td><td>343</td><td>2.9</td></tr><tr><td>PS4</td><td>222</td><td>1.9</td></tr><tr><td>N64</td><td>221</td><td>1.9</td></tr><tr><td>XOne</td><td>160</td><td>1.3</td></tr><tr><td>WiiU</td><td>108</td><td>0.9</td></tr><tr><td>SAT</td><td>69</td><td>0.6</td></tr><tr><td>SNES</td><td>44</td><td>0.4</td></tr><tr><td>DC</td><td>22</td><td>0.2</td></tr><tr><td>2600</td><td>13</td><td>0.1</td></tr><tr><td>GEN</td><td>10</td><td>0.1</td></tr><tr><td>NG</td><td>6</td><td>0.1</td></tr><tr><td>SCD</td><td>4</td><td>0.0</td></tr><tr><td>GB</td><td>4</td><td>0.0</td></tr><tr><td>3DO</td><td>3</td><td>0.0</td></tr><tr><td>PCFX</td><td>1</td><td>0.0</td></tr><tr><td>NES</td><td>1</td><td>0.0</td></tr><tr><td>WS</td><td>1</td><td>0.0</td></tr><tr><td>TG16</td><td>1</td><td>0.0</td></tr></tbody></table>
     
     Image 4. Pesebaran Kolom Platform
 
@@ -120,11 +137,22 @@ Image 5. Pesebaran Kolom Numerik
 
 Pada tahap ini divisualisasikan persebaran kolom `EU_Sales` terhadap kolom kategorik `Genre`, `Publisher`, dan `Platform`
 
+Pada Image 6 disajikan visualisasi persebaran kolom `EU_Sales` terhadap kolom kategorik `Genre`, `Publisher`, dan `Platform`. Didapatkan informasi sebagai berikut
+- Antara kolom `EU_Sales` dengan kolom `Genre` didapatkan persebaran nilai terbesar pada `Shooter` sedangkan persebaran nilai terendah pada `Adventure`
+- Antara kolom `EU_Sales` dengan kolom `Publisher` didapatkan persebaran nilai yang terhadap 523 nilai yang berbeda
+- Antara kolom `EU_Sales` dengan kolom `Platform` didapatkan persebaran nilai terbesar pada `NES` sedangkan persebaran nilai terendah pada nilai **SNES, DC, 2600, GEN, NG, SCD, GB, 3DO, PCFX, NES, WS, TG16**
+
 Image 6. Persebaran kolom `EU_Sales` terhadap kolom kategorik `Genre`, `Publisher`, dan `Platform`
 
 ![xx 5](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/30b387c2-edb6-4288-8ecb-dcb08107e08c)
 ![download (1)](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/ef135b47-164a-4dc7-b800-2c03efc1861b)
 ![download](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/2c59895c-2ade-44e6-9d60-968aaef110c2)
+
+Pada Image 7 disajikan visualisasi *multivariate analysis* atau persebaran antar kolom numerik. Didapatkan beberapa informasi sebagai berikut
+- Kolom `Rank` didominasi korelasi negatif dengan ditunjukkan visualisasi semakin tinggi variabel X, maka semakin rendah variabel Y
+- Kolom `Year` masih terdapat korelasi positif dan korelasi negatif tetapi mendekati nol yang artinya hampir tidak ada korelasi antar kolom
+- Kolom `NA_Sales`, `EU_Sales`, `Other_Sales`, dan `Global_Sales` saling memiliki korelasi positif antar kolomnya. Ini ditunjukkan visualisasi semakin tinggi variabel X, maka semakin tinggi variabel Y
+- Kolom `JP_Sales` memiliki korelasi negatif dengan kolom `NA_Sales`, `EU_Sales`, `Other_Sales`, dan `Global_Sales`. Ini ditunjukkan visualisasi semakin tinggi variabel X, maka semakin rendah variabel Y
 
 Image 7. Visualisasi persebaran antar kolom numerik
 ![Visualisasi persebaran antar kolom numerik](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/assets/67274784/560dde9a-df97-432f-a0b0-c38ccd410962)
@@ -165,7 +193,7 @@ Langkah dalam persiapan data dijabarkan dalam beberapa poin
     - Proses: Menggunakan `dataset.isnull().sum()` untuk mendapatkan informasi apakah terdapat data yang bersifat null, hasil:
         - Didapatkan *missing value* pada kolom `Year` dan `Publisher`. Kolom `Year` merupakan kolom numerik dengan 271 *missing value* dan kolom `Publisher` merupakan kolom kategorik dengan 58 *missing value*
 
-            Table 3. Informasi Missing Value
+            Table 6. Informasi Missing Value
 
             <table><thead><tr><th>Column</th><th>Count Null Value</th></tr></thead><tbody><tr><td>Rank</td><td>0</td></tr><tr><td>Name</td><td>0</td></tr><tr><td>Platform</td><td>0</td></tr><tr><td>Year</td><td>271</td></tr><tr><td>Genre</td><td>0</td></tr><tr><td>Publisher</td><td>58</td></tr><tr><td>NA_Sales</td><td>0</td></tr><tr><td>EU_Sales</td><td>0</td></tr><tr><td>JP_Sales</td><td>0</td></tr><tr><td>Other_Sales</td><td>0</td></tr><tr><td>Global_Sales</td><td>0</td></tr></tbody></table>
 
@@ -188,15 +216,6 @@ Langkah dalam persiapan data dijabarkan dalam beberapa poin
         - Membagi kolom yang bersifat numerk dan kategorikal 
         - Menyimpan kolom ke dalam masing-masing variabel yaitu `numerical_features` dan `categorical_features`
         - Melakukan visualisasi untuk menginformasikan data pada kolom kategorik yaitu `Genre`, `Publisher` dan `Platform`
-            - Didapatkan hasil pada kolom `Genre` pada Table 2
-            - Table 4. hasil univariate analysis pada kolom kategorik `country`
-            <table><thead><tr><th>Data</th><th>jumlah sampel</th><th>persentase</th></tr></thead><tbody><tr><td>Action</td><td>2409</td><td>20.2</td></tr><tr><td>Sports</td><td>1620</td><td>13.6</td></tr><tr><td>Misc</td><td>1336</td><td>11.2</td></tr><tr><td>Adventure</td><td>1120</td><td>9.4</td></tr><tr><td>Racing</td><td>936</td><td>7.8</td></tr><tr><td>Shooter</td><td>909</td><td>7.6</td></tr><tr><td>Role-Playing</td><td>863</td><td>7.2</td></tr><tr><td>Simulation</td><td>648</td><td>5.4</td></tr><tr><td>Platform</td><td>591</td><td>5.0</td></tr><tr><td>Fighting</td><td>541</td><td>4.5</td></tr><tr><td>Strategy</td><td>505</td><td>4.2</td></tr><tr><td>Puzzle</td><td>448</td><td>3.8</td></tr></tbody></table>
-            - Didapatkan hasil pada kolom `Platform` pada Table 3
-            - Table 5. hasil univariate analysis pada kolom kategorik `Platform`
-            <table><thead><tr><th>Data</th><th>jumlah sampel</th><th>persentase</th></tr></thead><tbody><tr><td>DS</td><td>1754</td><td>14.7</td></tr><tr><td>PS2</td><td>1466</td><td>12.3</td></tr><tr><td>Wii</td><td>1035</td><td>8.7</td></tr><tr><td>X360</td><td>928</td><td>7.8</td></tr><tr><td>PSP</td><td>906</td><td>7.6</td></tr><tr><td>PC</td><td>821</td><td>6.9</td></tr><tr><td>PS3</td><td>814</td><td>6.8</td></tr><tr><td>XB</td><td>735</td><td>6.2</td></tr><tr><td>PS</td><td>730</td><td>6.1</td></tr><tr><td>GBA</td><td>681</td><td>5.7</td></tr><tr><td>GC</td><td>479</td><td>4.0</td></tr><tr><td>3DS</td><td>344</td><td>2.9</td></tr><tr><td>PSV</td><td>343</td><td>2.9</td></tr><tr><td>PS4</td><td>222</td><td>1.9</td></tr><tr><td>N64</td><td>221</td><td>1.9</td></tr><tr><td>XOne</td><td>160</td><td>1.3</td></tr><tr><td>WiiU</td><td>108</td><td>0.9</td></tr><tr><td>SAT</td><td>69</td><td>0.6</td></tr><tr><td>SNES</td><td>44</td><td>0.4</td></tr><tr><td>DC</td><td>22</td><td>0.2</td></tr><tr><td>2600</td><td>13</td><td>0.1</td></tr><tr><td>GEN</td><td>10</td><td>0.1</td></tr><tr><td>NG</td><td>6</td><td>0.1</td></tr><tr><td>SCD</td><td>4</td><td>0.0</td></tr><tr><td>GB</td><td>4</td><td>0.0</td></tr><tr><td>3DO</td><td>3</td><td>0.0</td></tr><tr><td>PCFX</td><td>1</td><td>0.0</td></tr><tr><td>NES</td><td>1</td><td>0.0</td></tr><tr><td>WS</td><td>1</td><td>0.0</td></tr><tr><td>TG16</td><td>1</td><td>0.0</td></tr></tbody></table>
-            - Didapatkan hasil pada kolom `Publisher` pada Table 4
-            - Table 6. hasil univariate analysis pada kolom kategorik `Publisher`. Ditampilkan 5 teratas dan 5 terbawah karena terdapat 523 kategori
-            <table><thead><tr><th>Data</th><th>jumlah sampel</th><th>persentase</th></tr></thead><tbody><tr><td>Electronic Arts</td><td>866</td><td>7.3</td></tr><tr><td>Activision</td><td>734</td><td>6.2</td></tr><tr><td>Ubisoft</td><td>719</td><td>6.0</td></tr><tr><td>THQ</td><td>568</td><td>4.8</td></tr><tr><td>Namco Bandai Games</td><td>566</td><td>4.7</td></tr><tr><td>...</td><td>...</td><td>...</td></tr><tr><td>Marvel Entertainment</td><td>1</td><td>0.0</td></tr><tr><td>Illusion Softworks</td><td>1</td><td>0.0</td></tr><tr><td>Phantagram</td><td>1</td><td>0.0</td></tr><tr><td>The Learning Company</td><td>1</td><td>0.0</td></tr><tr><td>UIG Entertainment</td><td>1</td><td>0.0</td></tr><tr><td></td><td></td><td></td></tr><tr><td>[523 rows x 2 columns]</td><td></td><td></td></tr></tbody></table>
         - Melakukan visualisasi persebaran nilai dalam bentuk grafik untuk menginformasikan data pada kolom numerik yaitu **'Rank', 'Year', 'NA_Sales', 'EU_Sales', 'JP_Sales', 'Other_Sales', 'Global_Sales'**
     - Alasan: Untuk mengetahui informasi persebaran nilai pada kolom kategorikal dan numerikal secara spesifik univariate per kolom pada dataset yang digunakan sehingga dapat ditentukan langkah selanjutnya dalam melakukan persiapan data
 12. Melakukan multivariate analysis yaitu mengeksplorasi dan menjelaskan setiap variabel dalam kumpulan data secara terpisah untuk 2 atau lebih jenis variabel / kolom
@@ -249,7 +268,7 @@ Algoritma Penelitian ini melakukan pemodelan dengan 4 algoritma, yaitu K-Nearest
 Metrik evaluasi yang digunakan pada proyek ini adalah *mean squared error* (MSE) dan *R square* (*coefficient of determination*). 
 - **Akurasi** menentukan tingkat kemiripan antara hasil prediksi dengan nilai yang sebenarnya (y_test). 
 - ***Mean squared error* (MSE)** mengukur error dalam model statistik dengan cara menghitung rata-rata error dari kuadrat hasil aktual dikurang hasil prediksi. 
-- ***R Squared* (R2)** merupakan suatu nilai yang memperlihatkan seberapa besar variabel independen (eksogen) mempengaruhi variabel dependen (endogen). R squared merupakan angka yang berkisar antara 0 sampai 1 yang mengindikasikan besarnya kombinasi variabel independen secara bersama – sama mempengaruhi nilai variabel dependen. Nilai R-squared (R2) digunakan untuk menilai seberapa besar pengaruh variabel laten independen tertentu terhadap variabel laten dependen.[1] Berikut formula MSE :
+- ***R Squared* (R2)** merupakan suatu nilai yang memperlihatkan seberapa besar variabel independen (eksogen) mempengaruhi variabel dependen (endogen). R squared merupakan angka yang berkisar antara 0 sampai 1 yang mengindikasikan besarnya kombinasi variabel independen secara bersama – sama mempengaruhi nilai variabel dependen. Nilai R-squared (R2) digunakan untuk menilai seberapa besar pengaruh variabel laten independen tertentu terhadap variabel laten dependen.[7] Berikut formula MSE :
 
 ### Berikut hasil evaluasi
 - Akurasi
@@ -282,9 +301,9 @@ Dari penlitian ini, sudah dilakukan pembandingan dari 4 algoritma *machine learn
 
 
 ## Referensi
-[1] [MEMAHAMI R SQUARE (KOEFISIEN DETERMINASI) DALAM PENELITIAN ILMIAH](https://accounting.binus.ac.id/2021/08/12/memahami-r-square-koefisien-determinasi-dalam-penelitian-ilmiah/) 
+[1] [Akhil, T.S., Kaur, N., Reddy, B.S., Vinay, B. and Kishore, K.N., Data Visualization on video games global sales analysis& Predictive analysis on Real Estate pricing in Boston.](https://www.ijcstjournal.org/volume-9/issue-3/IJCST-V9I3P1.pdf) 
 
-[2] [Akhil, T.S., Kaur, N., Reddy, B.S., Vinay, B. and Kishore, K.N., Data Visualization on video games global sales analysis& Predictive analysis on Real Estate pricing in Boston.](https://www.ijcstjournal.org/volume-9/issue-3/IJCST-V9I3P1.pdf)
+[2] [Jalil, N.A., Hwang, H.J. and Dawi, N.M., 2019, July. Machines learning trends, perspectives and prospects in education sector. In Proceedings of the 3rd International Conference on Education and Multimedia Technology (pp. 201-205).](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/files/13662300/Machines.Learning.Trends.Perspectives.and.Prospects.in.Education.Sector.pdf)
 
 [3] [Bajaj, P., Ray, R., Shedge, S., Vidhate, S. and Shardoor, N., 2020. Sales prediction using machine learning algorithms. International Research Journal of Engineering and Technology (IRJET), 7(6), pp.3619-3625.
 ](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/files/13650914/IRJET_SALES_PREDICTION_USING_MACHINE_LEA.pdf)
@@ -297,4 +316,4 @@ Dari penlitian ini, sudah dilakukan pembandingan dari 4 algoritma *machine learn
 [6] [Zhang, F. and O'Donnell, L.J., 2020. Support vector regression. In Machine learning (pp. 123-140). Academic Press.
 ](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/files/13651086/10.1016%40B978-0-12-815739-8.00007-9.pdf)
 
-[7] [Jalil, N.A., Hwang, H.J. and Dawi, N.M., 2019, July. Machines learning trends, perspectives and prospects in education sector. In Proceedings of the 3rd International Conference on Education and Multimedia Technology (pp. 201-205).](https://github.com/ozaenzenzen/fam_python_predictive_analytics_test2/files/13662300/Machines.Learning.Trends.Perspectives.and.Prospects.in.Education.Sector.pdf)
+[7] [MEMAHAMI R SQUARE (KOEFISIEN DETERMINASI) DALAM PENELITIAN ILMIAH](https://accounting.binus.ac.id/2021/08/12/memahami-r-square-koefisien-determinasi-dalam-penelitian-ilmiah/)
